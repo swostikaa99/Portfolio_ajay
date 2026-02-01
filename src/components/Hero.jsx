@@ -52,7 +52,7 @@ const Hero = () => {
             transition={{ delay: 0.8, duration: 0.5 }}
             className="text-lg text-slate-500 mb-8 max-w-lg italic border-l-4 border-accent pl-4"
           >
-            "Responsible For Making People Lives Easier"
+            “Engineering Infrastructure. Advancing Knowledge. Creating Impact.”
           </motion.p>
 
           <motion.div
@@ -68,7 +68,7 @@ const Hero = () => {
               Contact Me <ArrowRight size={20} />
             </a>
             <a
-              href="#"
+              href="/AjayYadavCV.pdf"
               className="px-8 py-3 bg-white text-primary border-2 border-primary font-semibold rounded-lg hover:bg-primary/5 transition-colors flex items-center gap-2"
             >
               Download CV <Download size={20} />
@@ -84,8 +84,23 @@ const Hero = () => {
           className="relative flex justify-center"
         >
           <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white shadow-2xl bg-slate-200 flex items-center justify-center">
-            {/* Placeholder Icon */}
-            <User size={120} className="text-secondary/80" />
+            {/* Avatar Image or Placeholder Icon */}
+            <img
+              src="/favicon.ico"
+              alt="Avatar"
+              className="w-full h-full object-cover absolute inset-0"
+              onError={(e) => {
+                e.target.style.display = "none";
+                if (e.target.nextSibling)
+                  e.target.nextSibling.style.display = "block";
+              }}
+              style={{ display: "block" }}
+            />
+            <User
+              size={120}
+              className="text-secondary/80"
+              style={{ display: "none" }}
+            />
 
             {/* Overlay if image is missing */}
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent pointer-events-none" />

@@ -93,8 +93,14 @@ const ProjectCard = ({ project }) => {
 
 const Research = () => {
   return (
-    <section id="projects" className="py-20 bg-background">
-      <div className="custom-container">
+    <section
+      id="projects"
+      className="py-24 relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: 'url("/research_bg_premium.png")' }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-primary/50 to-primary/50 backdrop-blur-[1px] z-0"></div>
+
+      <div className="custom-container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -102,13 +108,15 @@ const Research = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Research & Projects
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="custom-container space-y-6">
+        <div className="bg-blue-950/70 border border-blue-400/20 
+text-white rounded-2xl shadow-xl hover:scale-[1.02] hover:shadow-2xl transition-all duration-300"
+>
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}

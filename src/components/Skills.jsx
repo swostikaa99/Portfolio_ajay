@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const skills = [
   { name: "Structural Analysis & Design", level: 90 },
@@ -13,7 +13,10 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-primary text-white relative overflow-hidden">
+    <section
+      id="skills"
+      className="py-20 bg-primary text-white relative overflow-hidden"
+    >
       {/* Background patterns */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute top-0 left-0 w-64 h-64 bg-accent rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
@@ -22,28 +25,37 @@ const Skills = () => {
 
       <div className="custom-container relative z-10">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Technical Proficiency</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Technical Proficiency
+            </h2>
             <div className="w-20 h-1 bg-accent rounded-full mb-8"></div>
-            <p className="text-secondary/80 text-lg leading-relaxed mb-8">
-              My technical expertise spans across core civil engineering disciplines and modern research methodologies. I combine theoretical depth with practical software skills to solve complex engineering problems.
+            <p className="text-white/80 text-lg leading-relaxed mb-8">
+              My technical expertise spans across core civil engineering
+              disciplines and modern research methodologies. I combine
+              theoretical depth with practical software skills to solve complex
+              engineering problems.
             </p>
             <div className="p-6 bg-white/10 rounded-xl backdrop-blur-sm border border-white/10">
-              <h3 className="font-semibold text-xl mb-2 text-accent">Continuous Learning</h3>
-              <p className="text-secondary/80">
-                Always actively engaged in learning new technologies and staying updated with the latest advancements in construction materials and structural analysis.
+              <h3 className="font-semibold text-xl mb-2 text-accent">
+                Continuous Learning
+              </h3>
+              <p className="text-white/80">
+                Always actively engaged in learning new technologies and staying
+                updated with the latest advancements in construction materials
+                and structural analysis.
               </p>
             </div>
           </motion.div>
 
           <div className="space-y-6">
             {skills.map((skill, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -51,8 +63,12 @@ const Skills = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="flex justify-between mb-2">
-                  <span className="font-medium text-secondary/70">{skill.name}</span>
-                  <span className="text-accent font-semibold">{skill.level}%</span>
+                  <span className="font-medium text-white/70">
+                    {skill.name}
+                  </span>
+                  <span className="text-accent font-semibold">
+                    {skill.level}%
+                  </span>
                 </div>
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">
                   <motion.div
