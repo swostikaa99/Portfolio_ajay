@@ -1,12 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
-import About from "./components/About";
+import AboutPage from "./pages/About/AboutPage";
+import ResearchPage from "./pages/Research/ResearchPage";
+import ExperiencePage from "./pages/Experience/ExperiencePage";
+import AwardsPage from "./pages/Awards/AwardsPage";
+import SkillsPage from "./pages/Skills/SkillsPage";
+import ContactPage from "./pages/Contact/ContactPage";
 import Layout from "./components/layout/Layout";
 import ScrollToTop from "./components/layout/ScrollToTop";
-import Projects from "./components/Research";
-import Achievements from "./components/Achievements";
-import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -15,10 +17,12 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/achievements" element={<Achievements />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/research" element={<ResearchPage />} />
+          <Route path="/experience" element={<ExperiencePage />} />
+          <Route path="/awards" element={<AwardsPage />} />
+          <Route path="/skills" element={<SkillsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>

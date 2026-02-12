@@ -18,10 +18,11 @@ const Header = () => {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Projects", href: "/projects" },
-    { name: "Achievements", href: "/achievements" },
-    { name: "Contact", href: "/contact" },
+  { name: "About", href: "/about" },
+  { name: "Publications", href: "/research" },
+  { name: "Experience", href: "/experience" },
+  { name: "Recognition", href: "/awards" },
+    { name: "Skills", href: "/skills" },
   ];
 
   const handleNavClick = () => setIsOpen(false);
@@ -73,10 +74,9 @@ const Header = () => {
                   {item.name}
                 </Link>
                 <motion.div
-                  className={`absolute -bottom-1 left-0 right-0 h-0.5 bg-accent origin-left ${
-                    location.pathname === item.href ? "scale-x-100" : ""
-                  }`}
-                  initial={{ scaleX: location.pathname === item.href ? 1 : 0 }}
+                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-accent origin-left"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: location.pathname === item.href ? 1 : 0 }}
                   whileHover={{ scaleX: 1 }}
                   transition={{ duration: 0.3 }}
                 />
